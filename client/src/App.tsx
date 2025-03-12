@@ -1,6 +1,5 @@
 import Home from "./views/home/home"
 import { useState } from "react";
-// import { ChevronDown, ChevronRight } from "lucide-react";
 
 const notesData = [
 	{
