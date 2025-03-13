@@ -1,4 +1,7 @@
+import Editor from "./Editor";
+
 const Main = ({ selectedNote }) => {
+
 	return (
 		<main className="flex-1 p-6">
 			{selectedNote ? (
@@ -9,6 +12,9 @@ const Main = ({ selectedNote }) => {
 			) : (
 				<p className="text-gray-500">Selecciona una nota para verla.</p>
 			)}
+			<div className="bg-gray-300 mt-4 p-4 rounded-lg">
+				<Editor />
+			</div>
 		</main>
 	);
 };

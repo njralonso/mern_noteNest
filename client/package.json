@@ -10,6 +10,9 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@editorjs/editorjs": "2.30.8",
+		"@editorjs/header": "^2.8.8",
+		"@editorjs/image": "2.10.2",
 		"@lordicon/react": "1.10.1",
 		"@reduxjs/toolkit": "2.6.1",
 		"@tailwindcss/vite": "4.0.9",
