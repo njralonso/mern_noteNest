@@ -1,4 +1,5 @@
 import express from "express"
+import { createFolderController } from "../../controllers/folderController.js"
 const folder = express.Router()
 
 folder.use((req, res, next) => {
@@ -6,8 +7,6 @@ folder.use((req, res, next) => {
 	next()
 })
 
-folder.get("/open", (req, res) => {
-	res.send({ message: "Carpeta abierta" })
-})
+folder.post("/create", createFolderController)
 
 export default folder
