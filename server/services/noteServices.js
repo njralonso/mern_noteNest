@@ -1,8 +1,8 @@
-import Folder from "../models/folderModel.js"
+import Note from "../models/noteModel.js"
 
-const newFolder = async (data) => {
-	const newFolder = await Folder.create(data)
-	return newFolder
+const createNoteServices = async (data) => {
+	const createNote = await Note.create(data)
+	return createNote
 }
 
-export { newFolder }
+export { createNoteServices }
