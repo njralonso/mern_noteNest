@@ -45,8 +45,8 @@ const Editor = () => {
 					class: ImageTool,
 					config: {
 						endpoints: {
-							byFile: 'http://localhost:8008/uploadFile', // Your backend file uploader endpoint
-							byUrl: 'http://localhost:8008/fetchUrl', // Your endpoint that provides uploading by Url
+							// byFile: 'http://localhost:3000/note/upload' // Your backend file uploader endpoint
+							byUrl: 'http://localhost:3000/note/upload', // Your endpoint that provides uploading by Url
 						}
 					}
 				}
