@@ -37,10 +37,10 @@ app.post("/note/upload", upload.single("image"), async (req, res) => {
 			return res.status(400).json({ message: "No file uploaded" })
 		}
 
-		// const optimizedImage = await sharp(file.buffer)
-		// 	.resize({ width: 800 }) // Redimensionar
-		// 	.jpeg({ quality: 80 }) // Convertir a JPEG y comprimir
-		// 	.toBuffer();
+		const optimizedImage = await sharp(file.buffer)
+			.resize({ width: 800 }) // Redimensionar
+			.jpeg({ quality: 80 }) // Convertir a JPEG y comprimir
+			.toBuffer();
 
 		// Guardar en MongoDB
 		const newImage = new Image({
@@ -53,12 +53,12 @@ app.post("/note/upload", upload.single("image"), async (req, res) => {
 
 		const savedImage = await newImage.save();
 		console.log("imagen guardada", savedImage)
-		// res.json({
-		// 	success: 1,
-		// 	file: {
-		// 		url: `http://localhost:5000/image/${savedImage._id}`, // URL para acceder a la imagen
-		// 	},
-		// });
+		res.json({
+			success: 1,
+			file: {
+				url: `http://localhost:5000/image/${savedImage._id}`, // URL para acceder a la imagen
+			},
+		});
 
 		res.status(200).json({ message: "File uploaded" })
 	} catch (error) {
