@@ -1,5 +1,5 @@
 import express from "express"
-import { createFolderController } from "../../controllers/folderController.js"
+import { createFolderController } from "../controllers/folderController.js"
 const folder = express.Router()
 
 folder.use((req, res, next) => {

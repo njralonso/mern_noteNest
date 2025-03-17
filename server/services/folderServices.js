@@ -1,4 +1,4 @@
-import Folder from "../models/folderModel.js";
+import Folder from "../schemas/folderSchema.js"
 
 const createFolderServices = async (data) => {
 	const folder = await Folder.create(data)

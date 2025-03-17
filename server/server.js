@@ -2,9 +2,11 @@ import express from "express"
 import compression from "compression"
 import cors from "cors"
 
-import folder from "./routes/folder/folder.js"
-import note from "./routes/note/note.js"
+import folder from "./routes/folder.js"
+import note from "./routes/note.js"
+import user from "./routes/user.js"
 import Image from "./models/imageModel.js";
+import auth from "./routes/authRoutes.js"
 
 import sharp from "sharp"
 import multer from "multer"
@@ -20,6 +22,8 @@ app.use(express.json())
 
 app.use("/folder", folder)
 app.use("/note", note)
+app.use("/user", user)
+app.use("/auth", auth)
 
 // Configurar multer (guardar en memoria para procesar antes de almacenar)
 const storage = multer.memoryStorage()

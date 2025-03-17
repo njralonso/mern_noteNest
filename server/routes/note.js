@@ -1,5 +1,5 @@
 import express from 'express';
-import { createNoteController } from '../../controllers/noteController.js';
+import { createNoteController } from '../controllers/noteController.js';
 const note = express.Router();
 
 note.use((req, res, next) => {
